@@ -1,0 +1,53 @@
+surendraingle@Sams-MacBook-Air ~ % mkdir hello            # (creating hello directory)
+surendraingle@Sams-MacBook-Air ~ % cd hello
+surendraingle@Sams-MacBook-Air hello % mkdir one
+surendraingle@Sams-MacBook-Air hello % cd one        # (goto directory)
+surendraingle@Sams-MacBook-Air one % touch a.txt.      #  (creating a.txt file)
+surendraingle@Sams-MacBook-Air one % touch b.txt
+surendraingle@Sams-MacBook-Air one % mkdir two
+surendraingle@Sams-MacBook-Air one % cd two
+surendraingle@Sams-MacBook-Air two % touch d.txt
+surendraingle@Sams-MacBook-Air two % mkdir three
+surendraingle@Sams-MacBook-Air two % cd three
+surendraingle@Sams-MacBook-Air three % touch e.txt
+surendraingle@Sams-MacBook-Air three % mkdir four
+surendraingle@Sams-MacBook-Air three % cd four
+surendraingle@Sams-MacBook-Air four % touch access.log
+surendraingle@Sams-MacBook-Air four % cd ..           #(backward to previous directory)
+surendraingle@Sams-MacBook-Air three % cd ..
+surendraingle@Sams-MacBook-Air two % cd ..
+surendraingle@Sams-MacBook-Air one % cd ..
+surendraingle@Sams-MacBook-Air hello % mkdir five
+surendraingle@Sams-MacBook-Air hello % ls
+five	one
+surendraingle@Sams-MacBook-Air hello % cd five
+surendraingle@Sams-MacBook-Air five % mkdir six
+surendraingle@Sams-MacBook-Air five % cd six
+surendraingle@Sams-MacBook-Air six % touch c.txt
+surendraingle@Sams-MacBook-Air six % mkdir seven
+surendraingle@Sams-MacBook-Air six % cd seven
+surendraingle@Sams-MacBook-Air seven % touch access.log
+surendraingle@Sams-MacBook-Air seven % cd ..
+surendraingle@Sams-MacBook-Air six % cd ..
+surendraingle@Sams-MacBook-Air five % cd ..
+surendraingle@Sams-MacBook-Air hello % find . -name '*.log' -delete         #(delete all files .log)
+surendraingle@Sams-MacBook-Air one % vi a.txt.                                        #(for adding text )
+surendraingle@Sams-MacBook-Air one % cat a.txt                                      #(for display content in file)
+Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others
+surendraingle@Sams-MacBook-Air one % cd ..
+surendraingle@Sams-MacBook-Air hello % rm -r five   
+surendraingle@Sams-MacBook-Air hello % ls
+one
+surendraingle@Sams-MacBook-Air hello % mv one uno                                       #(rename file)                       
+surendraingle@Sams-MacBook-Air hello % ls
+uno
+surendraingle@Sams-MacBook-Air hello % cd uno
+surendraingle@Sams-MacBook-Air uno % ls
+a.txt	b.txt	two                 
+surendraingle@Sams-MacBook-Air uno % mv a.txt two/             #(moving  file one directory to another )
+surendraingle@Sams-MacBook-Air uno % ls
+b.txt	two
+surendraingle@Sams-MacBook-Air uno % cd two
+surendraingle@Sams-MacBook-Air two % ls
+a.txt	d.txt	three
+surendraingle@Sams-MacBook-Air two % 

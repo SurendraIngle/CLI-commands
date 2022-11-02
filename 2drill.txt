@@ -1,0 +1,35 @@
+surendraingle@Sams-MacBook-Air ~ % mkdir demo
+surendraingle@Sams-MacBook-Air ~ % cd demo                  # (creating demo directory)
+surendraingle@Sams-MacBook-Air demo % touch HarryPotter.txt      #(create HarryPotter.txt file)
+surendraingle@Sams-MacBook-Air demo % ls
+HarryPotter.txt
+surendraingle@Sams-MacBook-Air demo % vi HarryPotter.txt                       #(for adding text )
+surendraingle@Sams-MacBook-Air demo % head -3 HarryPotter.txt            #(print first 3lines)
+Harry Potter and the Goblet of Fire
+　　By J.K. Rowling
+
+surendraingle@Sams-MacBook-Air demo % tail -10 Harrypotter.txt       #(print last 10 lines)
+　　and Goyle, who were still lying on the floor, covered in hex marks.
+　　Uncle Vernon was waiting beyond the barrier. Mrs. Weasley was close by him. She hugged Harry very tightly when she saw him and whispered in his ear, "I think Dumbledore will let you come to us later in the summer. Keep in touch, Harry."
+　　"See you. Harry," said Ron, clapping him on the back.
+　　"'Bye, Harry!" said Hermione, and she did something she had never done before, and kissed him on the cheek.
+　　"Harry - thanks," George muttered, while Fred nodded fervently at his side.
+　　Harry winked at them, turned to Uncle Vernon, and followed him silently from the station.
+　　There was no point worrying yet, he told himself, as he got into the back of the Dursleys' car.
+　　As Hagrid had said, what would come, would come ... and he would have to meet it when it did. 
+您下载的文件来自http://txt.nokiacn.net糯米社区为你制作
+【糯米社区-TXT论坛】-立志要做最新最全的txt文本格式电子书下载论坛!
+surendraingle@Sams-MacBook-Air demo % grep -c "Harry" HarryPotter.txt            #(count occurrence of string in book)
+2591
+surendraingle@Sams-MacBook-Air demo % grep -c "Ron" HarryPotter.txt
+947
+surendraingle@Sams-MacBook-Air demo % grep -c "Hermione" HarryPotter.txt
+822
+surendraingle@Sams-MacBook-Air demo % grep -c "Dumbledore" HarryPotter.txt
+507
+surendraingle@Sams-MacBook-Air demo % touch result.txt
+surendraingle@Sams-MacBook-Air demo % sed -n -e '100,200p' HarryPotter.txt > result.txt
+                                                                           #(print line 100 to 200 from the book)
+surendraingle@Sams-MacBook-Air demo % tr '' '\n' < HarryPotter.txt | sort | uniq -c | wc -l
+    6753                                                             #(print count for unique word in book)
+surendraingle@Sams-MacBook-Air demo % 
